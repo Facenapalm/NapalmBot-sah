@@ -27,4 +27,5 @@
 # 
 # m h  dom mon dow   command
 
-0 0 * * 2 jsub -N tow -quiet -o /dev/null -e /dev/null python3 $HOME/tow.py
+0 */4 * * * jsub -N sandboxes -quiet -o /dev/null -e /dev/null python3 $HOME/sandbox.py
+0 20  * * 2 jsub -N tow       -quiet -o /dev/null -e /dev/null python3 $HOME/tow.py
